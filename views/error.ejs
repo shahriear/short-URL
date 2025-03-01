@@ -1,0 +1,16 @@
+<%- include("./particals/header.ejs")%>
+
+  <div class="error-container">
+    <h1>Oops!</h1>
+    <h2>
+      <% if (locals.error) { %>
+        <%= error %>
+          <% } %>
+    </h2>
+    <p>It looks like the page you're looking for doesn't exist.</p>
+    <a href="/" class="btn">Go to Homepage</a>
+  </div>
+  <%- include("./particals/footer.ejs")%>
+    </body>
+
+    </html>

@@ -1,0 +1,15 @@
+<%- include("./particals/header.ejs")%>
+  <form class="reg-log wrap">
+    <div class="h1">login</div>
+    <input required type="email"
+      pattern="^([a-zA-z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+      placeholder="Enter your Email" name="email" id="email">
+    <input required type="password" placeholder="password" id="password" name="password">
+    <input type="submit" value="login" class="btn">
+  </form>
+
+  <%- include("./particals/footer.ejs")%>
+
+    </body>
+
+    </html>

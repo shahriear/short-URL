@@ -1,0 +1,46 @@
+<%- include("./particals/header.ejs")%>
+  <div class="container">
+    <h1>Short URL Maker</h1>
+    <form class="url-input" action="http://localhost:3000/api/v1/generate/shortUrl" method="post">
+      <input required type="text" class="long-url" placeholder="Past your long url here" name="url"
+        value="<%= locals.longUrl %>">
+      <button type="submit">Generate</button>
+    </form>
+    <% if (locals.error) { %>
+      <p class="error">
+        <%= error %>
+      </p>
+      <% } %>
+
+
+        <% if (locals.shortUrl){ %>
+          <div class="short-link">
+            <p>your Short Link:</p>
+            <div class="link">
+              <a href="<%= locals.shortUrl %>" target="_blank">
+                <%= locals.shortUrl %>
+              </a>
+              <button class="copy" onclick="copyShortLink()">copy</button>
+            </div>
+          </div>
+          <button class="backTohome" onclick="backTohome()">Generate New</button>
+          <% } %>
+  </div>
+
+  <%- include("./particals/footer.ejs")%>
+
+    <script>
+      // Function to copy the short URL to clipboard
+
+      function copyShortLink() {
+        const shortUrl = document.querySelector('.link a').href;
+        navigator.clipboard.writeText(shortUrl)
+      };
+      function backTohome() {
+        window.location.pathname = "/"
+      }
+
+    </script>
+    </body>
+
+    </html>
