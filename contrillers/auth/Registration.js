@@ -6,6 +6,8 @@ const saltRounds = 10;
 
 const reg = async (req, res) => {
   const { fullName, email, password } = req.body;
+  console.log(fullName, email, password);
+
   try {
     if (!fullName) {
       return res.status(400).send({ error: 'Name is required!' });
@@ -39,7 +41,7 @@ const reg = async (req, res) => {
       });
       users.save();
 
-      res.status(200).send({ message: 'Registration Successful!' });
+      res.redirect('/login');
     });
   } catch (error) {
     return res

@@ -51,9 +51,10 @@ nav ul li a:hover {
   padding: 20px;
   width: 100%;
   max-width: 600px;
-  background-color: white;
+  /* background-color: white; */
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  overflow: hidden;
 }
 
 .container h1 {
@@ -393,4 +394,80 @@ footer {
 
 .btn:hover {
   background-color: #45a049;
+}
+
+/* dashboard table */
+
+.userInfo {
+  border: 1px solid #220404;
+  padding: 20px 0;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+.url-card {
+  background-color: #fafafa;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  border-left: 5px solid rgb(75, 219, 75);
+}
+
+.url-card h2 {
+  color: #1ddb4c;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.url-card a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.url-card p {
+  font-size: 14px;
+  color: #5532ef;
+}
+
+.auth-status {
+  font-weight: bold;
+  color: green;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Visit History Styles */
+.visit-history {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.visit-history li {
+  padding: 5px 0;
+  margin-bottom: 1px;
+  font-size: 15px;
+  color: #969090;
+  background-color: rgb(231, 229, 229);
+  border-bottom: 1px solid #eee;
+}
+
+.visit-history li:last-child {
+  border-bottom: none;
+}
+.logout {
+  color: #f0ebeb;
+  padding: 0;
+  font-size: 18px;
+  border-radius: none;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  box-shadow: none;
 }

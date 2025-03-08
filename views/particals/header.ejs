@@ -12,9 +12,17 @@
   <nav>
     <ul>
       <li><a href="/">Short Url</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/Registration">Registration</a></li>
+      <% if (locals.loggedUser) { %>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="logout" class="logout">Log-Out</a></li>
+        <% } else{ %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/Registration">Registration</a></li>
+          <%} %>
+
     </ul>
   </nav>
 
-  <!-- time:22:00 -->
+
+
+  <!-- MVC Mordel view contoler -->

@@ -14,6 +14,10 @@ const registrationSchema = new Schema({
     type: String,
     required: true,
   },
+  shortUrls: {
+    ref: 'ShortUrl',
+    type: [Schema.Types.ObjectId],
+  },
 });
 
 module.exports = mongoose.model('User', registrationSchema);

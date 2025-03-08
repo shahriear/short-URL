@@ -1,7 +1,7 @@
 <%- include("./particals/header.ejs")%>
-  <form class="reg-log wrap">
+  <form class="reg-log wrap" action="/api/v1/auth/registration" method="post">
     <div class="h1">Registration</div>
-    <input required type="text" name="fullname" placeholder="Enter Your fullname">
+    <input required type="text" name="fullName" placeholder="Enter Your fullname">
     <input required type="email"
       pattern="^([a-zA-z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
       placeholder="Enter your Email" name="email" id="email">

@@ -1,7 +1,7 @@
 <%- include("./particals/header.ejs")%>
   <div class="container">
     <h1>Short URL Maker</h1>
-    <form class="url-input" action="http://localhost:3000/api/v1/generate/shortUrl" method="post">
+    <form class="url-input" action="/api/v1/generate/shortUrl" method="post">
       <input required type="text" class="long-url" placeholder="Past your long url here" name="url"
         value="<%= locals.longUrl %>">
       <button type="submit">Generate</button>
